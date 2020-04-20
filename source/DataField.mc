@@ -71,7 +71,7 @@ class DataField extends WatchUi.SimpleDataField {
 	}
 
 	hidden function distance_str(val) {
-		if (val < 10000.0) {
+		if (val < 100000.0) {
 			return (val / 1000).format("%0.2f");
 		}
 		return (val / 1000).format("%0.1f");
