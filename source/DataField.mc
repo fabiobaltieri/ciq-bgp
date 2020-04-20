@@ -13,6 +13,8 @@ class DataField extends WatchUi.SimpleDataField {
 	const REPEAT_RESET = 5;
 	const SPEED_TH = 2.5;
 
+	hidden var gps_field;
+
 	function reset() {
 		threshold = TH_RESET;
 		repeat = REPEAT_RESET;
@@ -42,8 +44,15 @@ class DataField extends WatchUi.SimpleDataField {
 	function initialize() {
 		SimpleDataField.initialize();
 		label = "Pause Warning";
+
 		recording = false;
 		reset();
+
+		gps_field = createField(
+				"gps_quality", 0,
+				FitContributor.DATA_TYPE_UINT8,
+				{:mesgType=>FitContributor.MESG_TYPE_RECORD});
+
 	}
 
 	function onTimerStart() {
@@ -82,6 +91,8 @@ class DataField extends WatchUi.SimpleDataField {
 		} else {
 			reset();
 		}
+
+		gps_field.setData(accuracy);
 
 		return (recording ? "R " : "P ") + 
 			speed.format("%0.2f") + " " +

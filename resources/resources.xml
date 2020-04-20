@@ -1,1 +1,14 @@
-<resources></resources>
+<resources>
+	<fitContributions>
+		<fitField
+			id="0"
+			displayInChart="true"
+			sortOrder="0"
+			precision="0"
+			chartTitle="@Strings.gps_label"
+			dataLabel="@Strings.gps_label"
+			unitLabel="@Strings.gps_units"
+			fillColor="#0044ff"
+			/>
+	</fitContributions>
+</resources>
