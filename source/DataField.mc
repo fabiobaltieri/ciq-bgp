@@ -29,10 +29,14 @@ class DataField extends WatchUi.SimpleDataField {
 		}
 		repeat--;
 
-		Attention.playTone(Attention.TONE_LOUD_BEEP);
+		if (Attention has :playTone) {
+			Attention.playTone(Attention.TONE_LOUD_BEEP);
+		}
 
-                var vibrateData = [new Attention.VibeProfile(100, 300)];
-		Attention.vibrate(vibrateData);
+		if (Attention has :vibrate) {
+			var vibrateData = [new Attention.VibeProfile(100, 300)];
+			Attention.vibrate(vibrateData);
+		}
 	}
 
 	function initialize() {
