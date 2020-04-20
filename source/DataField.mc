@@ -6,9 +6,9 @@ using Toybox.Attention;
 using Toybox.Position;
 
 class DataField extends WatchUi.SimpleDataField {
-	var recording;
-	var threshold;
-	var repeat;
+	hidden var recording;
+	hidden var threshold;
+	hidden var repeat;
 	const TH_RESET = 5;
 	const REPEAT_RESET = 5;
 	const SPEED_TH = 2.5;
