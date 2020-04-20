@@ -1,7 +1,7 @@
 SDK_PATH = $(HOME)/ciq
 KEY = $(SDK_PATH)/key/developer_key.der
 
-NAME = pause-warning
+NAME = pause-gps-warning
 APP_ID =
 
 JUNGLE = monkey.jungle

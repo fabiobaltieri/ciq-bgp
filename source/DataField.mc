@@ -43,7 +43,7 @@ class DataField extends WatchUi.SimpleDataField {
 
 	function initialize() {
 		SimpleDataField.initialize();
-		label = "Pause Warning";
+		label = "Pause/GPS Warning";
 
 		recording = false;
 		reset();
