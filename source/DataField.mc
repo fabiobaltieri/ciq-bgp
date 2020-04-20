@@ -94,12 +94,9 @@ class DataField extends WatchUi.SimpleDataField {
 
 		gps_field.setData(accuracy);
 
-		return (recording ? "R " : "P ") + 
-			speed.format("%0.2f") + " " +
-			accuracy + " " +
-			threshold + "/" +
-			repeat;
-
+		return (recording ? "R" : "P") +  " s:" +
+			speed.format("%0.2f") + " g:" +
+			accuracy;
 /*
 		if (info.elapsedDistance == null) {
 			return "0.00";
