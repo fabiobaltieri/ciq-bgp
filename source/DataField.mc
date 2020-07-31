@@ -13,6 +13,7 @@ class DataField extends WatchUi.SimpleDataField {
 	const REPEAT_RESET = 5;
 	const SPEED_TH = 2.5;
 
+	hidden var batt_field;
 	hidden var gps_field;
 
 	function reset() {
@@ -43,13 +44,18 @@ class DataField extends WatchUi.SimpleDataField {
 
 	function initialize() {
 		SimpleDataField.initialize();
-		label = "Pause/GPS Warning";
+		label = "Battery (G/P)";
 
 		recording = false;
 		reset();
 
+		batt_field = createField(
+				"battery", 0,
+				FitContributor.DATA_TYPE_UINT8,
+				{:mesgType=>FitContributor.MESG_TYPE_RECORD, :units=>"%"});
+
 		gps_field = createField(
-				"gps_quality", 0,
+				"gps_quality", 1,
 				FitContributor.DATA_TYPE_UINT8,
 				{:mesgType=>FitContributor.MESG_TYPE_RECORD});
 
@@ -77,11 +83,9 @@ class DataField extends WatchUi.SimpleDataField {
 		return (val / 1000).format("%0.1f");
 	}
 
-	function compute(info) {
-		var speed = info.currentSpeed;
-		var accuracy = info.currentLocationAccuracy;
+	function warn(speed, accuracy) {
 		if (speed == null || accuracy == null) {
-			return "---";
+			return;
 		}
 
 		if (recording && accuracy < Position.QUALITY_GOOD) {
@@ -93,15 +97,24 @@ class DataField extends WatchUi.SimpleDataField {
 		}
 
 		gps_field.setData(accuracy);
+	}
 
-		return (recording ? "R" : "P") +  " s:" +
-			speed.format("%0.2f") + " g:" +
-			accuracy;
-/*
-		if (info.elapsedDistance == null) {
-			return "0.00";
+	function compute(info) {
+		var stats = System.getSystemStats();
+		var batt = Math.round(stats.battery).toNumber();
+		var speed = info.currentSpeed;
+		var accuracy = info.currentLocationAccuracy;
+
+		//System.println(recording + " " + batt + " " + speed + " " + accuracy);
+
+		warn(speed, accuracy);
+
+		batt_field.setData(batt);
+
+		if (accuracy != null && accuracy < Position.QUALITY_GOOD) {
+			return stats.battery.format("%0.1f") + " G" + accuracy;
+		} else {
+			return stats.battery.format("%0.1f");
 		}
-		return distance_str(info.elapsedDistance);
-*/
 	}
 }

@@ -5,6 +5,18 @@
 			displayInChart="true"
 			sortOrder="0"
 			precision="0"
+			chartTitle="@Strings.batt_label"
+			dataLabel="@Strings.batt_label"
+			unitLabel="@Strings.batt_units"
+			fillColor="#ffe100"
+			/>
+	</fitContributions>
+	<fitContributions>
+		<fitField
+			id="1"
+			displayInChart="true"
+			sortOrder="0"
+			precision="0"
 			chartTitle="@Strings.gps_label"
 			dataLabel="@Strings.gps_label"
 			unitLabel="@Strings.gps_units"

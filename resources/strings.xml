@@ -1,5 +1,7 @@
 <resources>
 	<string id="AppName">BGP</string>
+	<string id="batt_label">Battery</string>
+	<string id="batt_units">%</string>
 	<string id="gps_label">GPS Quality</string>
 	<string id="gps_units"></string>
 </resources>
