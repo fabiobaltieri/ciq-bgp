@@ -1,5 +1,5 @@
 SDK_PATH = $(HOME)/ciq
-KEY = $(HOME)/.Garmin/key/developer_key.der
+KEY = developer_key.der
 
 NAME = bgp
 APP_ID =
