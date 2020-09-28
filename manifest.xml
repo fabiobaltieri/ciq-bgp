@@ -1,5 +1,5 @@
 <iq:manifest xmlns:iq="http://www.garmin.com/xml/connectiq" version="1">
-	<iq:application entry="Main" id="8FED55C779134F069F1819BAA5E52EDA" launcherIcon="@Drawables.LauncherIcon" minSdkVersion="1.2.0" name="@Strings.AppName" type="datafield">
+	<iq:application entry="Main" id="BFAA481C42CF411A9DD01990C2528E88" launcherIcon="@Drawables.LauncherIcon" minSdkVersion="1.2.0" name="@Strings.AppName" type="datafield">
 		<iq:products>
 			<iq:product id="approachs60"/>
 			<iq:product id="approachs62"/>
