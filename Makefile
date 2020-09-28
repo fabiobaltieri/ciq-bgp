@@ -2,7 +2,7 @@ SDK_PATH = $(HOME)/ciq
 KEY = developer_key.der
 
 NAME = bgp
-APP_ID =
+APP_ID = 0506df9f-7194-4bc3-8d2c-52e705d9a4a4
 
 JUNGLE = monkey.jungle
 ifeq ($(DEVICE),)
