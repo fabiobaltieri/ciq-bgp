@@ -1,3 +1,8 @@
 *.prg
+*.iq
 *.prg.debug.xml
+*-fit_contributions.json
+*-settings.json
 *.swp
+developer_key.der
+developer_key.pem
