@@ -19,6 +19,7 @@
 			<iq:product id="edge1030"/>
 			<iq:product id="edge1030bontrager"/>
 			<iq:product id="edge1030plus"/>
+			<iq:product id="edge1040"/>
 			<iq:product id="edge130"/>
 			<iq:product id="edge130plus"/>
 			<iq:product id="edge520plus"/>
@@ -28,6 +29,7 @@
 			<iq:product id="edge_1000"/>
 			<iq:product id="edge_520"/>
 			<iq:product id="edgeexplore"/>
+			<iq:product id="edgeexplore2"/>
 			<iq:product id="enduro"/>
 			<iq:product id="epix"/>
 			<iq:product id="epix2"/>
@@ -92,6 +94,8 @@
 			<iq:product id="venu2s"/>
 			<iq:product id="venud"/>
 			<iq:product id="venusq"/>
+			<iq:product id="venusq2"/>
+			<iq:product id="venusq2m"/>
 			<iq:product id="venusqm"/>
 			<iq:product id="vivoactive"/>
 			<iq:product id="vivoactive3"/>
