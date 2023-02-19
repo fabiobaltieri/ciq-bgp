@@ -9,6 +9,7 @@ class DataField extends WatchUi.SimpleDataField {
 	hidden var recording;
 	hidden var threshold;
 	hidden var repeat;
+	hidden var gps_warning;
 	const TH_RESET = 5;
 	const REPEAT_RESET = 5;
 	const SPEED_TH = 2.5;
@@ -45,6 +46,8 @@ class DataField extends WatchUi.SimpleDataField {
 	function initialize() {
 		SimpleDataField.initialize();
 		label = "Battery (G/P)";
+
+		gps_warning = Application.getApp().getProperty("gps_warning");
 
 		recording = false;
 		reset();
@@ -89,7 +92,9 @@ class DataField extends WatchUi.SimpleDataField {
 		}
 
 		if (recording && accuracy < Position.QUALITY_GOOD) {
-			maybe_warn();
+			if (gps_warning) {
+				maybe_warn();
+			}
 		} else if (!recording && speed > SPEED_TH) {
 			maybe_warn();
 		} else {

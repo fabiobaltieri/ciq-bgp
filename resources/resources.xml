@@ -23,4 +23,18 @@
 			fillColor="#0044ff"
 			/>
 	</fitContributions>
+
+	<properties>
+		<property id="gps_warning" type="boolean">true</property>
+	</properties>
+
+	<strings>
+		<string id="gps_warning">GPS Warning</string>
+	</strings>
+
+	<settings>
+		<setting propertyKey="@Properties.gps_warning" title="@Strings.gps_warning">
+			<settingConfig type="boolean" />
+		</setting>
+	</settings>
 </resources>
