@@ -45,7 +45,7 @@ class DataField extends WatchUi.SimpleDataField {
 
 	function initialize() {
 		SimpleDataField.initialize();
-		label = "Battery (G/P)";
+		label = "BATTERY (G/P)";
 
 		gps_warning = Application.getApp().getProperty("gps_warning");
 
