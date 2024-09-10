@@ -15,7 +15,7 @@
 		<fitField
 			id="1"
 			displayInChart="true"
-			sortOrder="0"
+			sortOrder="1"
 			precision="0"
 			chartTitle="@Strings.gps_label"
 			dataLabel="@Strings.gps_label"
