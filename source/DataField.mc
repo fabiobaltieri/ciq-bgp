@@ -54,7 +54,7 @@ class DataField extends WatchUi.SimpleDataField {
 
 		batt_field = createField(
 				"battery", 0,
-				FitContributor.DATA_TYPE_UINT8,
+				FitContributor.DATA_TYPE_FLOAT,
 				{:mesgType=>FitContributor.MESG_TYPE_RECORD, :units=>"%"});
 
 		gps_field = createField(
@@ -106,7 +106,6 @@ class DataField extends WatchUi.SimpleDataField {
 
 	function compute(info) {
 		var stats = System.getSystemStats();
-		var batt = Math.round(stats.battery).toNumber();
 		var speed = info.currentSpeed;
 		var accuracy = info.currentLocationAccuracy;
 
@@ -114,7 +113,7 @@ class DataField extends WatchUi.SimpleDataField {
 
 		warn(speed, accuracy);
 
-		batt_field.setData(batt);
+		batt_field.setData(stats.battery);
 
 		if (accuracy != null && accuracy < Position.QUALITY_GOOD) {
 			return stats.battery.format("%0.1f") + " G" + accuracy;
