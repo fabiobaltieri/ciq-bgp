@@ -26,7 +26,7 @@
 
 	<properties>
 		<property id="gps_warning" type="boolean">false</property>
-		<property id="drive_warning" type="boolean">true</property>
+		<property id="drive_warning" type="boolean">false</property>
 	</properties>
 
 	<strings>
