@@ -7,16 +7,25 @@ Battery:
 - shows the battery level
 - logs the battery level on the FIT file
 
-GPS
+GPS:
 
-- when the watch is recording, it warns (beep + vibrate up to five times) and indicates if the GPS signal level gets below GOOD
+- optional, default off
+- when the watch is recording, it warns (beep + vibrate up to five times) and
+  indicates if the GPS signal level gets below GOOD
 - if location quality is `GOOD` it only displays the battery level
 - logs the position quality in the FIT file
-- position quality values: 4 = `GOOD`, 3 = `USABLE`, 2 = `POOR`, 1 = `LAST_KNOWN` (see `Position.QUALITY_*` definitions)
+- position quality values: 4 = `GOOD`, 3 = `USABLE`, 2 = `POOR`, 1 =
+  `LAST_KNOWN` (see `Position.QUALITY_*` definitions)
 
-Pause Warning
+Pause Warning:
 
-- alerts (beep + vibrate) up to five times if the watch is not recording and speed start to raise, for example if you forget to unpause and start running
+- alerts (beep + vibrate) up to five times if the watch is not recording and
+  speed start to raise, for example if you forget to unpause and start running
+
+Drive Warning:
+- optional, default off
+- alerts (beep + vibrate) if recording and speed goes above 30km/h, for example
+  if you forget to stop a run and drive away
 
 https://apps.garmin.com/en-US/apps/0506df9f-7194-4bc3-8d2c-52e705d9a4a4
 
