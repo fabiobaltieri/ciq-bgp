@@ -31,7 +31,7 @@
 
 	<strings>
 		<string id="gps_warning">GPS Warning</string>
-		<string id="drive_warning">Car Warning</string>
+		<string id="drive_warning">Drive Warning</string>
 	</strings>
 
 	<settings>
