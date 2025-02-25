@@ -25,7 +25,7 @@
 	</fitContributions>
 
 	<properties>
-		<property id="gps_warning" type="boolean">true</property>
+		<property id="gps_warning" type="boolean">false</property>
 	</properties>
 
 	<strings>
