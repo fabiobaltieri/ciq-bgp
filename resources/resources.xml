@@ -26,14 +26,19 @@
 
 	<properties>
 		<property id="gps_warning" type="boolean">false</property>
+		<property id="drive_warning" type="boolean">true</property>
 	</properties>
 
 	<strings>
 		<string id="gps_warning">GPS Warning</string>
+		<string id="drive_warning">Car Warning</string>
 	</strings>
 
 	<settings>
 		<setting propertyKey="@Properties.gps_warning" title="@Strings.gps_warning">
+			<settingConfig type="boolean" />
+		</setting>
+		<setting propertyKey="@Properties.drive_warning" title="@Strings.drive_warning">
 			<settingConfig type="boolean" />
 		</setting>
 	</settings>
